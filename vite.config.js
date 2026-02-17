@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+	base: '/vue3-noty/', // для GitHub Pages
 	root: process.env.NODE_ENV === 'development' ? 'dev' : undefined,
 	plugins: [
 		vue(),
