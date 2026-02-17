@@ -13,8 +13,12 @@ npm install @lexinzector/vue3-noty
 Include using script tag:
 
 ```html
+<!-- noty styles -->
+<link rel="stylesheet" href="/dist/vue3-noty.css" />
+
+<!-- noty lib -->
 <script src="/dist/vue3-noty.umd.js"></script>
-// or
+<!-- or -->
 <script type="module" src="/dist/vue3-noty.es.js"></script>
 ```
 
@@ -34,20 +38,6 @@ app.use(NotyPlugin, {
 })
 
 app.mount('#app');
-```
-
-### Import noty styles
-
-Import stylesheet in your vue / js components:
-
-```js
-import '@lexinzector/vue3-noty/dist/vue3-noty.css';
-```
-
-Or, import styles in your less / scss stylesheet:
-
-```less
-@import '~@lexinzector/vue3-noty/dist/vue3-noty.css';
 ```
 
 ## Usage
