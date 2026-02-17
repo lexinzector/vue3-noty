@@ -5,7 +5,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
 	base: '/vue3-noty/', // для GitHub Pages
-	root: process.env.NODE_ENV === 'development' ? 'dev' : undefined,
+	root: 'dev',
 	plugins: [
 		vue(),
 		AutoImport({
@@ -14,7 +14,7 @@ export default defineConfig({
 		})
 	],
 	build: {
-		outDir: 'dev/dist', // сборка в dev/dist для GitHub Pages
+		outDir: 'demo', // сборка в dev/demo для GitHub Pages
 		emptyOutDir: true,
 		lib: {
 			entry: resolve(__dirname, 'src/index.js'),
