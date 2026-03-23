@@ -28,6 +28,7 @@ Import and register Vue plugin:
 import { createApp } from 'vue';
 import App from './App.vue';
 import NotyPlugin from '@lexinzector/vue3-noty';
+import 'noty/lib/noty.css';
 
 const app = createApp(App);
 
