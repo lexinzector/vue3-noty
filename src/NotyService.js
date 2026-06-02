@@ -28,7 +28,11 @@ export default class NotyService {
 		}
 		return new Noty(opts).show();
 	}
-
+	
+	create(options = {}) {
+		return this._notify(options);
+	}
+	
 	show(text, options = {}) {
 		return this._notify({ type: 'alert', text, ...options });
 	}
