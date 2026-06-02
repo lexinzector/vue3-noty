@@ -1,5 +1,5 @@
 import n from "noty";
-const i = typeof window < "u", r = {
+const r = typeof window < "u", i = {
   layout: "bottomRight",
   theme: "mint",
   timeout: 5e3,
@@ -9,18 +9,21 @@ const i = typeof window < "u", r = {
 class s {
   constructor(t = {}) {
     this.defaultOptions = {
-      ...r,
+      ...i,
       ...t
     };
   }
   _notify(t) {
-    if (!i) return null;
+    if (!r) return null;
     const e = {
       type: "alert",
       ...this.defaultOptions,
       ...t
     };
     return new n(e).show();
+  }
+  create(t = {}) {
+    return this._notify(t);
   }
   show(t, e = {}) {
     return this._notify({ type: "alert", text: t, ...e });
@@ -38,7 +41,7 @@ class s {
     return this._notify({ type: "info", text: t, ...e });
   }
   closeAll() {
-    i && n.closeAll();
+    r && n.closeAll();
   }
 }
 const c = {
